@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Null</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      color: #00ffcc;
+      background: url('https://www.transparenttextures.com/patterns/noisy-texture.png') no-repeat center center fixed; /* Static-like background */
+      background-size: cover;
+      backdrop-filter: brightness(0.4) blur(1px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      margin-bottom: 1rem;
+      animation: flicker 2s infinite, glitch 1.5s infinite;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      animation: glitch 1.5s infinite;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .songs iframe {
+      margin: 1rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    .error-message {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: red;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      animation: glitch 1.5s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: translate(0, 0);
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      20% {
+        transform: translate(-2px, 2px);
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      40% {
+        transform: translate(2px, -2px);
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      60% {
+        transform: translate(-2px, 2px);
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      80% {
+        transform: translate(2px, -2px);
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      100% {
+        transform: translate(0, 0);
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+    }
+
+    .glitch-background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      animation: glitch 2s infinite;
+      z-index: -1; /* So it stays behind the content */
+    }
+  </style>
+</head>
+<body>
+  <!-- Glitch Background Message -->
+  <div class="glitch-background">SYSTEM ERROR</div>
+  
+  <!-- Error Message -->
+  <div class="error-message">ERROR 404: NOT FOUND</div>
+
+  <h1>Hello! Welcome to my page!</h1>
+  <p>Hey, I'm null. A silly little goober who usually is on roblox a bunch! I play multiplayer online games a bunch.. and I am a bit of a wuss..</p>
+
+  <!-- Bold Title for Spotify Songs -->
+  <h2>My songs I usually listen to</h2>
+
+  <div class="songs">
+    <!-- Spotify Song 1 -->
+    <iframe width="300" height="80" src="https://open.spotify.com/embed/track/06yZoObVFRQqPhQNTdCHV5" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    
+    <!-- Spotify Song 2 -->
+    <iframe width="300" height="80" src="https://open.spotify.com/embed/track/0OruYmYrdGCF4PYoONjZuM" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <!-- Additional Spotify Song 3 -->
+    <iframe width="300" height="80" src="https://open.spotify.com/embed/track/21AUdfi6fLFDp9JuNcHsfS" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <!-- Additional Spotify Song 4 -->
+    <iframe width="300" height="80" src="https://open.spotify.com/embed/track/08s5oexV0VBSi5HovLjTUQ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <!-- Additional Spotify Song 5 -->
+    <iframe width="300" height="80" src="https://open.spotify.com/embed/track/2lbTlfSAWcWjwoObDmECVS" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+
+  <footer>
+    <p>RAM not included.</p>
+  </footer>
+</body>
+</html>
